@@ -3,6 +3,8 @@
  */
 package com.gupao.peter.showme.mybatis.handler;
 
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,6 +50,7 @@ public class Test {
 		try {
 			sqlSession = DBUtil.openSqlSession();
 			UserInfoMapper userInfoMapper = (UserInfoMapper) sqlSession.getMapper(UserInfoMapper.class);
+			Method m = UserInfoMapper.class.getMethod("selectByPrimaryKey",Integer.class);
 			UserInfo user = userInfoMapper.selectByPrimaryKey(1);
 			System.out.println(user.toString());
 			for (String s : user.getHobby()) {
