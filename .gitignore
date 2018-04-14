@@ -1,6 +1,7 @@
 # project logs
 logs/
 out/
+*.class
 
 # jrebel
 rebel.xml
