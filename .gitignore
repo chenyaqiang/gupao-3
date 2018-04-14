@@ -22,6 +22,7 @@ target/
 
 # idea ignore
 .idea/
+classes/
 *.ipr
 *.iml
 *.iws
